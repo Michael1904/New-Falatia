@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -10,36 +11,257 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Загальні стилі для header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    z-index: 1000;
+    /* padding: 10px 20px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Бургер-меню */
+.burger-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Стилі для активного бургер-меню */
+.burger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Стиль для тексту поруч із бургером */
+.menu-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Навігаційне меню (для великих екранів) */
 .navbar {
     display: flex;
     justify-content: center;
+    /* Вирівнювання навігації по центру */
     align-items: center;
-    padding: 15px 50px;
-    background-color: #000000;
-    position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    position: relative;
 }
+
 .nav-links {
     display: flex;
     gap: 20px;
+    align-items: center;
+    /* Вирівнювання елементів по вертикалі */
 }
+
+.nav-links li {
+    list-style: none;
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     padding: 8px 15px;
     border-radius: 5px;
     transition: background-color 0.3s;
+    font-weight: bold;
+    /* Зроблено текст жирнішим */
 }
+
 .nav-links a:hover {
     background-color: #2563EB;
 }
+
 .nav-links a.active {
     background-color: #2563EB;
 }
+
+/* Кнопка Discord для navbar */
+.discord-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    /* Додано відступ між лінками та кнопкою */
+}
+
+.discord-logo img {
+    width: 40px;
+    /* Коригуємо розмір іконки Discord */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.discord-logo a:hover img {
+    transform: scale(1.1);
+    /* Легке збільшення при наведенні */
+}
+
+.mobile-nav img {
+    width: 35px;
+}
+
+.discoed-button {
+    background-color: #5865F2;
+    border-radius: 5px;
+}
+
+/* Мобільне меню */
+.mobile-nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mobile-nav.active {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+}
+
+/* Стиль для лінків у мобільному меню */
+.mobile-nav-links {
+    margin-top: 35px;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-nav-links li {
+    margin: 20px 0;
+}
+
+.mobile-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav-links a:hover {
+    background-color: #2563EB;
+}
+
+/* Кнопка Discord в мобільному меню */
+.mobile-nav .discord-logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Приховуємо текст "FALATIA" на великих екранах */
+@media (min-width: 1024px) {
+    .menu-text {
+        display: none;
+    }
+
+    /* Мобільне меню приховується на великих екранах */
+    .mobile-nav {
+        display: none;
+    }
+
+    /* Відображаємо navbar по центру на великих екранах */
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        padding: 0px;
+        display: flex;
+    }
+
+    /* Відображення кнопки Discord на великих екранах */
+    .navbar .discord-logo {
+        display: flex;
+        margin-left: 20px;
+        /* Відступ між меню та кнопкою */
+    }
+}
+
+/* Ховаємо стандартне меню на мобільних пристроях */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-nav .discord-logo {
+        display: block;
+    }
+
+    .navbar .discord-logo {
+        display: none;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+
+    .burger-container {
+        display: none;
+    }
+
+    /* .navbar {
+        display: absolute;
+    } */
+
+    .header {
+        padding: 0px;
+    }
+}
+
+
+/* Вирівнюємо навігацію по центру для великих екранів */
+@media (min-width: 1024px) {
+    .mobile-nav-links {
+        display: none;
+    }
+
+
+}
+
+
+/* Main-banner */
+
 .main-banner {
     width: 100%;
     height: 60vh;
@@ -50,6 +272,7 @@ body {
     position: relative;
     margin-top: 80px;
 }
+
 .main-banner img {
     width: 90%;
     height: 90%;
@@ -135,16 +358,19 @@ body {
     overflow: hidden;
     position: relative;
 }
+
 .team-info {
     flex: 1;
     padding-right: 40px;
 }
+
 .team-header {
     font-size: 30px;
     font-weight: bold;
     color: #603d25;
     margin-bottom: 20px;
 }
+
 .team-card {
     background: #fff5e1;
     padding: 25px;
@@ -155,6 +381,7 @@ body {
     overflow: hidden;
     white-space: normal;
 }
+
 .team-name {
     font-size: 26px;
     font-weight: bold;
@@ -162,6 +389,7 @@ body {
     display: flex;
     align-items: center;
 }
+
 .role-badge {
     background: #ff7f50;
     color: white;
@@ -174,6 +402,7 @@ body {
     min-width: 200px;
     text-align: center;
 }
+
 .team-description {
     font-size: 18px;
     color: #444;
@@ -181,6 +410,7 @@ body {
     white-space: normal;
     overflow-wrap: break-word;
 }
+
 .team-image {
     flex: 0.5;
     display: flex;
@@ -189,15 +419,18 @@ body {
     transform: scale(0.8);
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
+
 .team-image img {
     max-width: 350px;
 }
+
 .team-navigation {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     position: relative;
 }
+
 .nav-btn {
     background: none;
     border: none;
@@ -206,9 +439,11 @@ body {
     color: #e67e22;
     padding: 10px 20px;
 }
+
 .nav-btn:hover {
     color: #ff5733;
 }
+
 .progress-bar {
     position: absolute;
     bottom: -10px;
@@ -218,12 +453,14 @@ body {
     background: rgba(230, 126, 34, 0.3);
     overflow: hidden;
 }
+
 .progress-fill {
     width: 0;
     height: 100%;
     background: #e67e22;
     transition: width 20s linear;
 }
+
 .social-section {
     background-color: black;
     padding: 50px 20px;
