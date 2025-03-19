@@ -57,6 +57,7 @@ header {
 
 /* Стиль для тексту поруч із бургером */
 .menu-text {
+    padding: 10px;
     color: white;
     font-size: 20px;
     font-weight: bold;
