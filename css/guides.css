@@ -59,6 +59,25 @@ body {
     /* Зменшено ефект hover для зображення */
 }
 
+
+@media (max-width: 1024px) {
+    .guide-grid {
+        width: 70%;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 стовпці на планшетах */
+        gap: 40px;
+        /* Зменшено відстань між картками */
+    }
+
+    .guide-grid img {
+        width: 200px;
+        height: 200px;
+
+    }
+
+}
+
+
 /* Адаптивність для планшетів */
 @media (max-width: 768px) {
     .guide-grid {
@@ -104,7 +123,8 @@ body {
 }
 
 .footer {
-    border-radius: 15px; /* Закруглені кути для всього футера */
+    border-radius: 15px;
+    /* Закруглені кути для всього футера */
     margin-bottom: 30px;
     margin-top: 40px;
     color: #4d4d4d;
@@ -258,13 +278,16 @@ body {
     .footer-top {
         border-radius: 20px 20px 0 0;
         display: flex;
-        flex-direction: column; /* Вертикальне вирівнювання елементів */
-        align-items: center; /* Центрування елементів по горизонталі */
-        height: auto; /* Дозволяє футеру адаптуватися до висоти контенту */
+        flex-direction: column;
+        /* Вертикальне вирівнювання елементів */
+        align-items: center;
+        /* Центрування елементів по горизонталі */
+        height: auto;
+        /* Дозволяє футеру адаптуватися до висоти контенту */
     }
 
-    .footer-bottom{
-        border-radius:  0 0 30px 30px;
+    .footer-bottom {
+        border-radius: 0 0 30px 30px;
     }
 
     .footer-image img {
@@ -279,4 +302,3 @@ body {
     }
 
 }
-
