@@ -1,0 +1,148 @@
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+  /* --- HERO BLOCK --- */
+  .orbucks-hero {
+    background-image: url('/img/Cosmo_Store.png'); /* 🔁 заміни шлях до картинки */
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 80%; /* ❗ робить блок вузькішим */
+    max-width: 950px;
+    margin: 150px auto 30px; /* ❗ центр + відступ згори */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+
+  .hero-text {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff;
+  }
+
+  .hero-text p {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-top: 5px;
+  }
+
+  /* --- RANK INFO --- */
+  .rank-info {
+    text-align: center;
+    color: #ccc;
+    margin: 30px 0;
+    font-size: 1em;
+  }
+
+  .rank-info span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  /* --- MAIN SECTION --- */
+  .orbucks-store {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .bucks-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .bucks-box {
+    background: #f4dfd3;
+    color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    /* width: 280px; */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .bucks-box img {
+    width: 250px;
+    margin-bottom: 10px;
+  }
+
+  .bucks-box h3 {
+    margin: 10px 0;
+    font-size: 1.4em;
+  }
+
+  .bucks-box button {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .bucks-box button:hover {
+    background: #222;
+  }
+
+  .bonus-label {
+    background: red;
+    color: white;
+    font-size: 0.8em;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin: 10px auto 5px auto; 
+    display: block; 
+    width: fit-content;
+  }
+  
+
+  .bonus-none{
+    color: white;
+    font-size: 0.8em;
+    padding: 10px 1px;
+    border-radius: 5px;
+    margin: 10px auto 5px auto; 
+    display: block; 
+    width: fit-content;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .hero-text {
+      left: 20px;
+      bottom: 15px;
+    }
+
+    .hero-text h1 {
+      font-size: 1.8em;
+    }
+
+    .bucks-box {
+      width: 90%;
+    }
+  }
