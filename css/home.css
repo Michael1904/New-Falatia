@@ -1,13 +1,9 @@
-html,
-body {
-    overflow-x: hidden;
-}
 
 body {
-    background-color: black;
+    background-color: #000000;
     color: white;
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: centerrgb(17, 17, 17);
     margin: 0;
     padding: 0;
 }

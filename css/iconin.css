@@ -1,0 +1,87 @@
+body {
+    background-color: #000000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 0;
+    font-size: 17.5px; 
+  }
+  
+  .main-header {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px 30px;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  .main-header img {
+    border-radius: 5px;
+    width: 190px;
+    flex-shrink: 0;
+  }
+
+  .main-header-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .main-header-text span {
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .main-header p {
+    max-width: 700px;
+    margin: 30px auto 0;
+    color: #ccc;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .section h2 {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+  
+  .section p {
+    margin-bottom: 20px;
+  }
+  
+  /* Створення додаткового відступу між абзацами і наступним div */
+  .section p + div,
+  .section p + img,
+  .section p + figure {
+    margin-top: 20px;
+  }
+  
+  .content-img {
+    border-radius: 5px;
+    max-width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .caption {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 8px;
+    text-align: center;
+  }
+  
