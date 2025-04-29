@@ -53,3 +53,55 @@ h3 {
 p {
     font-size: 1em;
 }
+
+@media (max-width: 1024px) {
+    .blog-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  
+    .blog-image {
+      height: 220px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .blog-image {
+      height: 200px;
+    }
+  
+    .blog-text {
+      padding: 10px;
+    }
+  
+    h3 {
+      font-size: 1.3em;
+    }
+  
+    p {
+      font-size: 0.95em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-section {
+      padding: 30px 15px;
+    }
+  
+    .blog-image {
+      height: 180px;
+    }
+  
+    h3 {
+      font-size: 1.2em;
+    }
+  
+    p {
+      font-size: 0.9em;
+    }
+  }
+  

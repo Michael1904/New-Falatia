@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/guides.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <link rel="stylesheet" href="./css/glow.css">
     <title>Guides</title>
 </head>
 
@@ -53,74 +55,90 @@
     <div class="guides-container">
         <div class="guide-grid">
             <a href="#" class="guide-card">
-                <img src="./img/Archeology_Guide.png" alt="Archeology">
-                <p>Archeology</p>
+                <img src="./img/rules.png" alt="Archeology">
+                <p>Rules</p>
             </a>
             <a href="#" class="guide-card">
-                <img src="./img/Archeology_Guide.png" alt="Blighted Biomes">
+                <img src="./img/Bioms.png" alt="Blighted Biomes">
                 <p>Blighted Biomes</p>
             </a>
             <a href="./guides/cosmetics.html" class="guide-card">
-                <img src="./Cosmetic_Guide.jpg" alt="Cosmetics">
+                <img src="./img/Cosmetic.png" alt="Cosmetics">
                 <p>Cosmetics</p>
             </a>
-            <a href="#" class="guide-card">
-                <img src="./img/Archeology_Guide.png" alt="Economy">
-                <p>Economy</p>
+            <a href="./guides/economy.html" class="guide-card">
+                <img src="./img/Money.png" alt="Economy">
+                <p>Економіка</p>
             </a>
             <a href="#" class="guide-card">
-                <img src="./img/Archeology_Guide.png" alt="Enchanting">
-                <p>Enchanting</p>
+                <img src="./img/Lore.png" alt="Enchanting">
+                <p>Lore</p>
             </a>
             <a href="#" class="guide-card">
-                <img src="./img/Archeology_Guide.png" alt="Farming">
+                <img src="./img/Farm.png" alt="Farming">
                 <p>Farming</p>
             </a>
             <a href="#" class="guide-card">
-                <img src="./img/Archeology_Guide.png" alt="Furniture">
+                <img src="./img/Decor.png" alt="Furniture">
                 <p>Furniture</p>
             </a>
             <a href="#" class="guide-card">
-                <img src="./img/Archeology_Guide.png" alt="Graves">
-                <p>Graves</p>
+                <img src="./img/qwest.png" alt="Quest">
+                <p>Quest</p>
             </a>
             <a href="#" class="guide-card">
-                <img src="./img/Archeology_Guide.png" alt="Open Worlds">
-                <p>Open Worlds</p>
+                <img src="./img/Map.png" alt="Open Worlds">
+                <p>Worlds Map</p>
             </a>
         </div>
     </div>
     </div>
+   
+    
     <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-info">
-                <a href="https://play.originrealms.com" class="footer-logo">PLAY.ORIGINREALMS.COM</a>
-                <span class="server-status">121</span>
+        <div class="footer__container">
+          <div class="footer__left">
+            <img src="./img/server-icon.png" alt="Logo" class="footer__logo">
+            <div class="footer__brand">
+              <div>#Falatia</div>
+              <div>2025</div>
             </div>
-            <div class="footer-links">
-                <a href="https://discord.com" target="_blank"><img src="./svg/icons8-discord.svg"
-                        alt="Discord" /></a>
-                <a href="https://www.tiktok.com/@sl0w12?lang=ru-RU" target="_blank"><img src="./svg/tiktok-svgrepo-com.svg"
-                        alt="TikTok" /></a>
-                <a href="https://instagram.com" target="_blank"><img src="./svg/telegram-svgrepo-com.svg"
-                        alt="Telegram" /></a>
-            </div>
+          </div>
+          <div class="footer__center">
+            <a href="#" class="footer__link"><span>📞</span> Контакти</a>
+            <a href="#" class="footer__link"><span>📄</span> Документи</a>
+          </div>
+          <div class="footer__right">
+            Сайт зробив <strong>Я</strong>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-left">
-                <div class="footer-image">
-                    <img src="./img/server-icon.png" alt="Footer Image" />
-                </div>
-            </div>
-            <div class="footer-right">
-                <p>Origin Realms, A Piston Solutions product. realm@piston.gg</p>
-                <p>We are in no way affiliated with or endorsed by Mojang, AB.</p>
-            </div>
-        </div>
-    </footer>
+      </footer>
+      
 
 
     <script src="./js/burger.js"></script>
+    <script src="./js/prelouder.js"></script>
+    <script src="./js/glow.js"></script>
+    
+    <div id="cursor-glow"></div>
+
+    <div id="preloader">
+        <div class="loader">
+          <div class="box box1"></div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+      
+          <div class="box box8"></div>
+          <div class="empty"></div>
+          <div class="box box4"></div>
+      
+          <div class="box box7"></div>
+          <div class="box box6"></div>
+          <div class="box box5"></div>
+        </div>
+      </div>
+      
+      
 </body>
 
 </html>
